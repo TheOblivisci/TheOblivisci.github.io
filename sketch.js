@@ -7,7 +7,7 @@ let tCell = 0;
 let trace = -1;
 
 let X = 100;
-let cellSize = 40;
+let cellSize = 20;
 
 let cell = 0;
 
