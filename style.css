@@ -1,7 +1,29 @@
 html, body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 canvas {
-  display: block;
+    display: block;
+}
+.b1 {
+    border-radius: 5px;
+    background-color: rgba(45, 202, 213, 0.984);
+    color: white;
+    border: 3px solid rgba(128, 195, 199, 0.984);
+}
+.b1:hover{
+    color: black;
+    background-color: white;    
+}
+
+.b3 {
+    border-radius: 5px;
+    background-color: rgb(185, 124, 243);
+    color: white;
+    border: 2px solid rgb(73, 26, 116);
+
+}
+.b3:hover{
+    background-color: white;
+    color: black;
 }

@@ -27,49 +27,83 @@ let obstacleButton;
 let weightButton;
 let obsatacleMazeButton;
 let weightMazeButton;
+let homeButton;
 
 let queue = [];
 
 function setup() {
-  let params = getURLParams();
-  changeAlgorithmNumber(params.algo);
-  
   createCanvas(windowWidth, windowHeight);
   background(255);
   stroke(255);
 
-  textHeight = 30;
+let buttonLength = 120
+  let gap = (width - 9*buttonLength)/10;
+  console.log(gap);
+
+  textHeight = 35;
+  
+  position = gap;
   visualizeButton = createButton("Visualize");
-  visualizeButton.position(20, textHeight);
+  visualizeButton.position(position, textHeight);
   visualizeButton.mousePressed(visualizePath);
+  visualizeButton.size(120,30);  
+  visualizeButton.addClass('b1');
 
+  position += gap + buttonLength;
   refreshButton = createButton("Refresh");
-  refreshButton.position(100, textHeight);
+  refreshButton.position(position , textHeight);
   refreshButton.mousePressed(refreshScreen);
+  refreshButton.size(120,30);
+  refreshButton.addClass('b1');
 
-  sourceButton = createButton("Choose Source");
-  sourceButton.position(180, textHeight);
+  position += gap + buttonLength;
+  sourceButton = createButton(" Source");
+  sourceButton.position(position + 0.99*gap, textHeight);
   sourceButton.mousePressed(chooseSource);
+  sourceButton.size(120,30);
+  sourceButton.addClass('b3');
 
-  destinationButton = createButton("Choose Destination");
-  destinationButton.position(300, textHeight);
+  position += gap + buttonLength;
+  destinationButton = createButton(" Destination");
+  destinationButton.position(position + 0.33*gap, textHeight);
   destinationButton.mousePressed(chooseDestination);
+  destinationButton.size(120,30);
+  destinationButton.addClass('b3');
+  
+  position += gap + buttonLength;
+  obstacleButton = createButton(" Obstacle");
+  obstacleButton.position(position - 0.33*gap, textHeight);
+  obstacleButton.mousePressed(chooseObstacle);
+  obstacleButton.size(120,30);
+  obstacleButton.addClass('b3');
 
-  destinationButton = createButton("Choose Obstacle");
-  destinationButton.position(440, textHeight);
-  destinationButton.mousePressed(chooseObstacle);
-
-  destinationButton = createButton("Choose Weight");
-  destinationButton.position(560, textHeight);
-  destinationButton.mousePressed(chooseWeight);
-
+  position += gap + buttonLength;
+  weightButton = createButton(" Weight");
+  weightButton.position(position - 0.99*gap, textHeight);
+  weightButton.mousePressed(chooseWeight);
+  weightButton.size(120,30);
+  weightButton.addClass('b3');
+  
+  position += gap + buttonLength;
   obsatacleMazeButton = createButton("Obstacle Maze");
-  obsatacleMazeButton.position(680, textHeight);
+  obsatacleMazeButton.position(position + 0.33*gap, textHeight);
   obsatacleMazeButton.mousePressed(createObstacleMaze);
-
+  obsatacleMazeButton.size(120,30);
+  obsatacleMazeButton.addClass('b3');
+  
+  position += gap + buttonLength;
   weightMazeButton = createButton("Weight Maze");
-  weightMazeButton.position(790, textHeight);
+  weightMazeButton.position(position - 0.33*gap, textHeight);
   weightMazeButton.mousePressed(createWeightMaze);
+  weightMazeButton.size(120,30);
+  weightMazeButton.addClass('b3');
+  
+  position += gap + buttonLength;
+  homeButton = createButton("Home Page");
+  homeButton.position(position, textHeight);
+  homeButton.mousePressed(backToHome);
+  homeButton.size(120,30);
+  homeButton.addClass('b1');
 
   speedSlider = createSlider(1, 30, 2);
   WeightHeavinessSlider = createSlider(1, 1000, 3);
@@ -95,7 +129,7 @@ function draw() {
     frameRate(speedSlider.value());
     if (size == 0) {
       textSize(10);
-      fill(255);
+      fill(0);
       text("No path found between the source and the destination", 20, 80);
     } else if (AlgorithmNumber == 1) {
       for (k = 0; k < size; k++) {
@@ -401,6 +435,12 @@ function createWeightMaze() {
   }
 }
 
-function changeAlgorithmNumber(n) {
-    AlgorithmNumber = n;
+function backToHome(){
+  window.open("https://www.w3schools.com");
+}
+
+function displaySelectFirstMessage(){
+    textSize(10);
+    fill(0);
+    text("Please select a cell before clicking on the button.", 20, 80);
 }
