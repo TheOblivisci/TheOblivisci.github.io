@@ -5,12 +5,3 @@ html, body {
 canvas {
   display: block;
 }
-button {
-    background-color: rgb(30, 157, 157);
-    color: white;
-    text-align: center;
-}
-
-button:hover {
-    background-color: rgb(4, 73, 73);
-}
