@@ -32,6 +32,8 @@ let homeButton;
 let queue = [];
 
 function setup() {
+  let params = getURLParams();
+  changeAlgorithmNumber(params.algo)
   createCanvas(windowWidth, windowHeight);
   background(255);
   stroke(255);
@@ -443,4 +445,8 @@ function displaySelectFirstMessage(){
     textSize(10);
     fill(0);
     text("Please select a cell before clicking on the button.", 20, 80);
+}
+
+function changeAlgorithmNumber(n){
+  AlgorithmNumber = n;
 }
