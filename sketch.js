@@ -33,7 +33,7 @@ let queue = [];
 
 function setup() {
   let params = getURLParams();
-  (params.algo)
+  changeAlgorithmNumber(params.algo);
   createCanvas(windowWidth, windowHeight);
   background(255);
   stroke(255);
