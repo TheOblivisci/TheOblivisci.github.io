@@ -8,7 +8,6 @@ let trace = -1;
 
 let X = 100;
 let Y = 24;
-let Z = 17;
 let cellSize = 20;
 
 let cell = 0;
@@ -114,7 +113,7 @@ let buttonLength = 120
   WeightHeavinessSlider = createSlider(1, 1000, 3);
 
   n = Math.floor((height - X) / cellSize);
-  m = Math.floor(width / cellSize) - 1;
+  m = Math.floor(width / cellSize);
 
   //z = (Width - m*cellSize)/2;
 
@@ -328,7 +327,7 @@ class Cell {
     else if (this.v == 7) fill(0, 60, 120);
     else if (this.v < 0) fill(255, 255, 102);
 
-    rect(this.a * cellSize + Z, this.b * cellSize + X, cellSize, cellSize);
+    rect(this.a * cellSize, this.b * cellSize + X, cellSize, cellSize);
     //text(this.v, this.a*cellSize + 5, this.b*cellSize + X + 15);
   }
 
@@ -399,7 +398,7 @@ function refreshScreen() {
 function mousePressed() {
   A = mouseX;
   B = mouseY;
-  a = Math.floor(A / cellSize);
+  a = Math.floor((A)  / cellSize);
   b = Math.floor((B - X) / cellSize);
 
   cell = cells[a][b];
