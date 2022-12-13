@@ -1,0 +1,35 @@
+.thank-you{
+     text-align: center;
+     font-size: 50px;
+     font-weight: 500;
+     margin: 30px;
+     margin-bottom: 10px;
+}
+.gif-div{
+    margin: 0px;
+}
+.home{
+    background-color: rgb(25, 178, 178);
+    font-size: 25px;
+    padding:16px;
+    border-radius: 12px;
+    color: white;
+    width: 300px;
+    
+}
+
+.home:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid aqua;
+}
+
+.box{
+    border-radius: 12px;
+    font-size: 20px;
+    background-color: plum;
+    width:960px;
+    padding:25px;
+    margin: 20px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,81 @@
+.outer-box{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(190, 242, 242);
+    height: 100%;
+}
+ .box-1 {
+    margin: 5px;
+    margin-top: 90px;
+    height: 740px;
+    width: 32%;
+} 
+.box-2 {
+    margin: 30px 60px;
+    margin-top: 130px;
+    background-color: teal;
+    height: 600px;
+    width: 3px;
+} 
+.box-3 {
+    margin: 5px;
+    height: 849px;
+    width: 20%;
+} 
+.box-4{
+    width: 38%;
+    
+}
+.buttons{
+    margin: 70px;
+}
+.buttons button{
+
+    height: 60px;
+    width: 500px;
+    font-size: 30px;
+    border-radius: 12px;
+    margin: 25px;
+    background-color: rgba(45, 202, 213, 0.984);
+    color: white;
+    border: 3px solid rgba(2, 144, 154, 0.984);
+}
+
+.heading{
+    text-align: right;
+    font-size: 50px;
+    color: black;
+    margin-right: 150px;
+}
+.buttons button:hover{
+    color: black;
+    background-color: white;    
+}
+
+.box-3 button{
+    height: 60px;
+    width: 300px;
+    font-size: 30px;
+    border-radius: 12px;
+    margin: 25px;
+    background-color: rgb(185, 124, 243);
+    color: white;
+    border: 2px solid rgb(73, 26, 116);
+
+}
+.box-3 button:hover{
+    background-color: white;
+    color: black;
+}
+.inner{
+    margin-top: 300px;
+    margin-left: 30px;
+}
+.gif-main{
+    margin: 100px;
+    margin-top: 160px;
+    
+}
+.gif{
+    border: 3px solid black;
+}
