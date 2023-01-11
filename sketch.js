@@ -371,7 +371,16 @@ function heuristic(cellA, cellB) {
 }
 
 function visualizePath() {
-  desFlag = true;
+  if(source == false && destination == false) {
+    window.alert("Please select Source and Destination before Visualizing.");
+  }
+  else if(source == false) {
+    window.alert("Please select Source before before Visualizing.");
+  }
+  else if(destination == false) {
+    window.alert("Please select Destination before before Visualizing.");
+  }
+  else desFlag = true;
 }
 
 function refreshScreen() {
@@ -443,7 +452,7 @@ function createWeightMaze() {
 }
 
 function backToHome(){
-  window.open("https://www.w3schools.com");
+  window.open("http://localhost:3000/home","_parent");
 }
 
 function displaySelectFirstMessage(){
